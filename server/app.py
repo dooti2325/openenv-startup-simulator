@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import RedirectResponse
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from models import Action
 from env import StartupEnv
@@ -11,7 +11,7 @@ app = FastAPI(title="Startup Survival Simulator API")
 
 @app.get("/")
 def read_root():
-    return RedirectResponse(url='/docs')
+    return HTMLResponse(content='<meta http-equiv="refresh" content="0; url=/docs" />')
     
 # Global environment instance for simple stateful API
 game_env = StartupEnv()
