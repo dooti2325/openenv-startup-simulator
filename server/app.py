@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from models import Action
 from env import StartupEnv
@@ -8,6 +9,10 @@ from tasks import get_tasks
 
 app = FastAPI(title="Startup Survival Simulator API")
 
+@app.get("/")
+def read_root():
+    return RedirectResponse(url='/docs')
+    
 # Global environment instance for simple stateful API
 game_env = StartupEnv()
 
