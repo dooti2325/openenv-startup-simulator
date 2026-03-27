@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+venv/
+*.pyc
+.env
+deploy.py
+test*-output.txt
+test_output.txt

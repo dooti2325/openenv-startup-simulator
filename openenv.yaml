@@ -1,0 +1,20 @@
+name: startup-survival-env
+
+actions:
+  - increase_marketing
+  - hire_engineer
+  - improve_product
+  - reduce_costs
+  - pivot_market
+  - raise_funding
+  - do_nothing
+
+observations:
+  - cash
+  - users
+  - growth_rate
+  - burn_rate
+  - churn_rate
+  - product_quality
+  - market_demand
+  - time_step

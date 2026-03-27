@@ -1,0 +1,14 @@
+[project]
+name = "startup_env"
+version = "0.1.0"
+description = "A real-world OpenEnv simulator for startup survival."
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "openenv-core",
+    "openai"
+]
+
+[project.scripts]
+server = "server.app:main"
